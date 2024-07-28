@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { remove, add } from "../redux/Slices/CartSlice";
 import toast from 'react-hot-toast';
@@ -46,7 +45,7 @@ const Product = ({product}) => {
         </div>
 
         {
-          cartItems.some(cartItem => cartItem.id == product.id) ?
+          cartItems.some(cartItem => cartItem.id === product.id) ?
           
           (<button onClick={removeItem}
           className="text-gray-700 border-2 border-gray-700 rounded-full font-semibold 
